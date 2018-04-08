@@ -6,7 +6,7 @@
  end
  
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
- gem 'rails', '~> 5.1.2'
+ gem 'rails'
  
  group :production do
    # Use pg as the production database for Active Record
@@ -36,5 +36,5 @@
  gem 'thor'
  
  group :development do
-   gem 'listen', '~> 3.0.5'
+   gem 'listen'
  end
