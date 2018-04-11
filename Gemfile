@@ -40,6 +40,11 @@
  
  gem 'thor'
  
+ # manually added
+ 
+ gem 'bootstrap-sass'
+ 
+ 
  group :development do
    gem 'listen'
  end
