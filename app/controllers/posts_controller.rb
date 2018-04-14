@@ -7,8 +7,23 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
+  def create
+    @post = Post.new
+    @post.title = params[:post][:title]
+    @post.body = params[:post][:body]
+    
+    if @post.save
+      flash[:notice] = 'Post was saved!'
+      redirect_to @post
+    else
+      flash.now[:alert] = "Something went wrong, please try again..."
+      render :new
+    end
+  end
+  
   def edit
   end
 end
