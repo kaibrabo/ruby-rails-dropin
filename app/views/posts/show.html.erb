@@ -1,2 +1,15 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<p>Post #SHOW</p>
+PostID: <%= params[:id] %>
+
+<div>
+    <h3 class='post-title'>
+        <strong><%= @post.title %></strong>
+    </h3>
+    <p class='post_created'>
+        <em>made: <%= @post.created_at.strftime("%b %d, '%y") %></em>
+    </p>
+</div>
+
+<h4 class='post-body'>
+    <%= @post.body %>
+</h4>
