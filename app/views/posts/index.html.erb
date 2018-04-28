@@ -1,16 +1,19 @@
-<h2>All Posts</h2>
+<h2>Posts</h2>
+
+
 
 <% @posts.reverse.each { |p| %>
 
         <div class='index-post'>
-            <p>
-                <em><%= p.created_at.strftime("%b %d, '%y") %></em>
-            </p>
-            <p>
+            <p class="post-info">
                 <strong><%= link_to p.title, p , {:class => 'post-details'}%></strong>
+            </p>
+            <p class="post-time">
+                <em><%= p.created_at.strftime("%b %d, '%y") %></em>
             </p>
             <p>
                 <%= link_to truncate(p.body, length: 20), p , {:class => 'post-details'}%>
             </p>
         </div>
+
 <% } %>
