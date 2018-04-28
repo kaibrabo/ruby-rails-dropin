@@ -17,16 +17,6 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-.nav {
-    background-color: rgb(38, 78, 142);
-    display: flex;
-    flex-direction: row;
-}
-
-.nav a {
-    color: white;
-}
-
 //scrollbar on Posts
 html {
     overflow: scroll;
@@ -37,3 +27,32 @@ html {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
+
+img, 
+video, 
+embed,
+object {
+    max-width: 100%;
+}
+
+body {
+    text-transform: uppercase;
+}
+
+.nav {
+    background-color: rgb(38, 78, 142);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: white;
+}
+
+.nav-links a:hover {
+    color: rgb(38, 78, 142);
+}
+
+
+

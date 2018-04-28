@@ -51,6 +51,28 @@ RSpec.describe PostsController, type: :controller do
       expect(assigns(:post)).not_to be_nil
     end
   end
+
+  describe "GET #edit" do
+    it "returns http success" do
+      get :edit, params: { id: my_post.id }
+      expect(response).to have_http_status(:success)
+    end
+    
+    it "renders the #edit view" do
+      get :edit, params: { id: my_post.id }
+      expect(response).to render_template :edit
+    end
+    
+    it "assigns/updates post to @post" do
+      get :edit, params: {id: my_post.id}
+      
+      post = assigns(:post)
+      
+      expect(post.id).to eq my_post.id
+      expect(post.title).to eq my_post.title
+      expect(post.body).to eq my_post.body
+    end
+  end
   
   describe "POST create" do
     it "increases the number of Post by 1" do
@@ -69,12 +91,29 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to redirect_to Post.last
     end
   end
-
-  # describe "GET #edit" do
-  #   it "returns http success" do
-  #     get :edit
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
+  
+  describe "PUT update" do
+    it "updates posts with expected attributes" do
+      new_title = RandomData.random_sentence
+      new_body = RandomData.random_paragraph
+      
+      put :update, params: { id: my_post.id, post: {title: new_title, body: new_body}}
+      
+      updated_post = assigns(:post)
+      
+      expect(updated_post.id).to eq my_post.id
+      expect(updated_post.title).to eq my_post.title
+      expect(updated_post.body).to eq my_post.body
+    end
+    
+    it "redirects to updated post" do
+      new_title = RandomData.random_sentence
+      new_body = RandomData.random_paragraph
+      
+      put :update, params: { id: my_post.id, post: {title: new_title, body: new_body}}
+      
+      expect(response).to redirect_to my_post
+    end
+  end
 
 end
