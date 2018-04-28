@@ -28,15 +28,16 @@ html {
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 
-img, 
-video, 
-embed,
-object {
-    max-width: 100%;
-}
-
 body {
     text-transform: uppercase;
+    width: 100%;
+
+}
+
+.container { 
+    width: 100%; 
+    padding: 0; 
+    margin: 0;
 }
 
 .nav {
@@ -44,6 +45,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding-right: 20%;
 }
 
 .nav-links a {
