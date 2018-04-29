@@ -7,6 +7,7 @@
 }
 
 .new-post-link,
+.save-post-link,
 .edit-post-link,
 .delete-post-link {
     color: black;
@@ -18,9 +19,23 @@
 }
 
 .new-post-link:hover,
-.edit-post-link:hover {
+.save-post-link:hover,
+.edit-post-link:hover,
+.delete-post-link:hover {
     text-decoration: none;
     color: black;
+}
+
+.all-posts-title {
+    margin: 5% auto;
+}
+
+.new-post-link {
+    background-color: rgb(225, 225, 225);
+}
+
+.save-post-link {
+    background-color: rgb(37, 142, 38);
 }
 
 .index-post {
@@ -54,9 +69,22 @@
     padding: 5px;
 }
 
+.post-details {
+    color: black;
+}
+
+.post-details:hover {
+    text-decoration: none;
+}
+
 .show-post-edit-delete {
     display: flex;
     flex-direction: row;
+}
+
+.edit-post-link,
+.delete-post-link {
+    margin: auto 5px;
 }
 
 .edit-post-link {
