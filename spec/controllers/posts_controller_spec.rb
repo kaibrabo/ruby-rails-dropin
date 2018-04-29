@@ -93,17 +93,17 @@ RSpec.describe PostsController, type: :controller do
   end
   
   describe "PUT update" do
-    it "updates posts with expected attributes" do
+    it "updates post with expected attributes" do
       new_title = RandomData.random_sentence
       new_body = RandomData.random_paragraph
       
-      put :update, params: { id: my_post.id, post: {title: new_title, body: new_body}}
+      put :update, params: { id: my_post.id, post: {title: new_title, body: new_body } }
       
       updated_post = assigns(:post)
       
       expect(updated_post.id).to eq my_post.id
-      expect(updated_post.title).to eq my_post.title
-      expect(updated_post.body).to eq my_post.body
+      expect(updated_post.title).to eq new_title
+      expect(updated_post.body).to eq new_body
     end
     
     it "redirects to updated post" do

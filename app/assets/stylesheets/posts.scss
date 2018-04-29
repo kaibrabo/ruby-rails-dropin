@@ -1,5 +1,30 @@
+.alert,
+.all-posts,
+.new-post,
+.show-post,
+.edit-post {
+    margin: 0 20%;
+}
+
+.new-post-link,
+.edit-post-link,
+.delete-post-link {
+    color: black;
+    border: 1px solid rgb(38, 78, 142);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.new-post-link:hover,
+.edit-post-link:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .index-post {
-    border: 1px solid  rgb(38, 78, 142);
+    border: 1px solid rgb(38, 78, 142);
     border-radius: 5px;
     padding: 10px;
     margin: 10px auto;
@@ -8,4 +33,36 @@
 .post-time {
     float: right;
     transform: scale(0.8);
+}
+
+.post-rules-item {
+    list-style-type: none;
+}
+
+.show-post-id {
+    text-align: right;
+}
+
+.show-post-details p {
+    color: red;
+    text-align: right;
+}
+
+.post-body {
+    border: 1px solid rgb(38, 78, 142);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.show-post-edit-delete {
+    display: flex;
+    flex-direction: row;
+}
+
+.edit-post-link {
+    background-color: rgb(244, 241, 66);
+}
+
+.delete-post-link {
+    background-color: rgb(244, 53, 53);
 }

@@ -1,17 +1,24 @@
-<h2>Posts</h2>
+<div class="all-posts">
+   <h2>Posts</h2>
 
-<% @posts.reverse.each { |p| %>
+    
+    <h5>
+        <%= link_to 'Create Post', new_post_path, {:class => 'new-post-link'} %>
+    </h5>
 
-        <div class='index-post'>
-            <p class="post-info">
-                <strong><%= link_to p.title, p , {:class => 'post-details'}%></strong>
-            </p>
-            <p class="post-time">
-                <em><%= p.created_at.strftime("%b %d, '%y") %></em>
-            </p>
-            <p>
-                <%= link_to truncate(p.body, length: 20), p , {:class => 'post-details'}%>
-            </p>
-        </div>
-
-<% } %>
+    <% @posts.reverse.each { |p| %>
+    
+            <div class='index-post'>
+                <p class="post-info">
+                    <strong><%= link_to p.title, p , {:class => 'post-details'}%></strong>
+                </p>
+                <p class="post-time">
+                    <em><%= p.created_at.strftime("%b %d, '%y") %></em>
+                </p>
+                <p>
+                    <%= link_to truncate(p.body, length: 20), p , {:class => 'post-details'}%>
+                </p>
+            </div>
+    
+    <% } %> 
+</div>
