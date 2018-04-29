@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Workspace</title>
-  
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  
-<div class='container'>
-    <ul class='nav nav-links'>
-      <li class="head-logo">
-        <%= link_to 'MCC', root_path %></li>
-      <li><%= link_to 'About', about_path %></li>
-      <li><%= link_to 'Posts', posts_path %></li>
-      <li><%= link_to 'FAQ', faq_path %></li>
-    </ul>
-
-  
-  <% if flash[:notice] %>
-    <div class="alert alert-success">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:notice] %>
+  <head>
+    <title>Workspace</title>
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    
+    <div class='container'>
+        <ul class='nav nav-links'>
+          <li class="head-logo">
+            <%= link_to 'MCC', root_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Posts', posts_path %></li>
+          <li><%= link_to 'FAQ', faq_path %></li>
+        </ul>
+    
+      
+      <% if flash[:notice] %>
+        <div class="alert alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:alert] %>
+        <div class="alert alert-warning">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+    
+      <%= yield %>
     </div>
-  <% elsif flash[:alert] %>
-    <div class="alert alert-warning">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:alert] %>
-    </div>
-  <% end %>
-
-  <%= yield %>
-</div>
-
-<footer>
-  made by <%= link_to "Kai Brabo", "https://www.github.com/kaibrabo" %>
-</footer>
-</body>
+  
+    <footer>
+      <p>
+        made by <%= link_to "Kai Brabo", "https://www.github.com/kaibrabo", {:class => "footer-link"} %>
+      </p>
+    </footer>
+  </body>
 </html>
