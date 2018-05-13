@@ -1,0 +1,28 @@
+<div class="new-topic">
+ <h3>Create topic</h3>
+ 
+   <div class="topic-rules">
+     <p>topic Guidelines</p>
+     <ol>
+       <li class="topic-rules-item">ex. <em><strong> Marin County - China Camp State Park </strong></em></li>
+       <li class="topic-rules-item">only state facts, please leave opinions to yourself.</li>
+     </ol>
+   </div>
+   
+   <div class="topic-input">
+     <%= form_for @topic do |f| %>
+       <div class="form-group">
+         <%= f.label :name %>
+         <%= f.text_field :name, class: 'form-control', placeholder: "type name" %>
+       </div>
+       <div class="form-group">
+         <%= f.label :description %>
+         <%= f.text_area :description, rows: 8, class: 'form-control', placeholder: "type details" %>
+       </div>
+       <div class="form-group">
+         <%= f.submit "Save", class: 'save-topic-link' %>
+       </div>
+     <% end %>
+   </div>
+
+</div>

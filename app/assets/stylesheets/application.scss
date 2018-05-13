@@ -43,8 +43,7 @@ body {
     background-color: rgb(38, 78, 142);
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    padding-right: 20%;
+    justify-content: space-around;
 }
 
 .nav-links a {

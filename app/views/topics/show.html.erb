@@ -1,0 +1,56 @@
+<div class="show-topic">
+    <h4 class="show-topic-id">
+        Topic ID: <%= params[:id] %>
+    </h4>
+    
+    <!--  Topic Details -->
+    <div class="show-topic-details">
+        <p>
+            <em>made: <%= @topic.created_at.strftime("%b %d, '%y") %></em>
+        </p>
+        <h3 class='topic-title'>
+            <strong><%= @topic.name %></strong>
+        </h3>
+        <h4 class='topic-body'>
+            <%= @topic.description %>
+        </h4>
+    </div>
+    
+    <!-- EDIT & DELETE buttons-->
+    <div class="show-topic-edit-delete">
+        <h5>
+            <%= link_to 'Edit', edit_topic_path, class: 'edit-topic-link' %>
+        </h5>
+        <h5>
+            <%= link_to 'Delete', @topic, method: :delete, class: 'delete-topic-link', data: {confirm: "Are you sure you want to delete this topic?"} %>
+        </h5>
+    </div>
+    
+    <!-- Topic Posts -->
+    <div class="topic-posts">
+        <div class="all-posts">
+           <h2 class="all-posts-title">Posts</h2>
+            
+            <h5>
+                <%= link_to 'Create Post', new_post_path(@topic), {:class => 'new-post-link'} %>
+            </h5>
+        
+            <% @topic.posts.reverse.each { |p| %>
+            
+                    <div class='index-post'>
+                        <p class="post-info">
+                            <strong><%= link_to p.title, p , {:class => 'post-details'}%></strong>
+                        </p>
+                        <p class="post-time">
+                            <em><%= p.created_at.strftime("%b %d, '%y") %></em>
+                        </p>
+                        <p>
+                            <%= link_to truncate(p.body, length: 30), p , {:class => 'post-details'}%>
+                        </p>
+                    </div>
+            
+            <% } %> 
+        </div>
+    </div>
+    
+</div>

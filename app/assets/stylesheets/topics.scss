@@ -1,0 +1,96 @@
+.alert,
+.all-topics,
+.new-topic,
+.show-topic,
+.edit-topic {
+    margin: 0 20%;
+}
+
+.new-topic-link,
+.save-topic-link,
+.edit-topic-link,
+.delete-topic-link {
+    color: black;
+    border: 1px solid rgb(38, 78, 142);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.new-topic-link:hover,
+.save-topic-link:hover,
+.edit-topic-link:hover,
+.delete-topic-link:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.all-topics-title {
+    margin: 5% auto;
+}
+
+.new-topic-link {
+    background-color: rgb(225, 225, 225);
+}
+
+.save-topic-link {
+    background-color: rgb(37, 142, 38);
+}
+
+.index-topic {
+    border: 1px solid rgb(38, 78, 142);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.topic-time {
+    float: right;
+    transform: scale(0.8);
+}
+
+.topic-rules {
+    text-transform: lowercase;
+}
+
+.show-topic-id {
+    text-align: right;
+}
+
+.show-topic-details p {
+    color: red;
+    text-align: right;
+}
+
+.topic-body {
+    border: 1px solid rgb(38, 78, 142);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.topic-details {
+    color: black;
+}
+
+.topic-details:hover {
+    text-decoration: none;
+}
+
+.show-topic-edit-delete {
+    display: flex;
+    flex-direction: row;
+}
+
+.edit-topic-link,
+.delete-topic-link {
+    margin: auto 5px;
+}
+
+.edit-topic-link {
+    background-color: rgb(244, 241, 66);
+}
+
+.delete-topic-link {
+    background-color: rgb(244, 53, 53);
+}

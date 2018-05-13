@@ -1,0 +1,23 @@
+<div class="all-topics">
+   <h2 class="all-topics-title">Topics</h2>
+   
+    <h5>
+        <%= link_to 'Create Topic', new_topic_path, {:class => 'new-topic-link'} %>
+    </h5>
+
+    <% @topics.reverse.each { |t| %>
+    
+            <div class='index-topic'>
+                <p class="topic-info">
+                    <strong><%= link_to truncate(t.name, length: 20), t , {:class => 'topic-details'}%></strong>
+                </p>
+                <p class="topic-time">
+                    <em><%= t.created_at.strftime("%b %d, '%y") %></em>
+                </p>
+                <p>
+                    <%= link_to truncate(t.description, length: 30), t , {:class => 'topic-details'}%>
+                </p>
+            </div>
+    
+    <% } %> 
+</div>
