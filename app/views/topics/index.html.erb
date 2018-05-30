@@ -12,7 +12,7 @@
                     <strong><%= link_to truncate(t.name, length: 20), t , {:class => 'topic-details'}%></strong>
                 </p>
                 <p class="topic-time">
-                    <em><%= t.created_at.strftime("%b %d, '%y") %></em>
+                    <em><%= t.created_at.strftime("%b %d, %Y") %></em>
                 </p>
                 <p>
                     <%= link_to truncate(t.description, length: 30), t , {:class => 'topic-details'}%>
