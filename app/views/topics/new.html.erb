@@ -10,19 +10,7 @@
    </div>
    
    <div class="topic-input">
-     <%= form_for @topic do |f| %>
-       <div class="form-group">
-         <%= f.label :name %>
-         <%= f.text_field :name, class: 'form-control', placeholder: "type name" %>
-       </div>
-       <div class="form-group">
-         <%= f.label :description %>
-         <%= f.text_area :description, rows: 8, class: 'form-control', placeholder: "type details" %>
-       </div>
-       <div class="form-group">
-         <%= f.submit "Save", class: 'save-topic-link' %>
-       </div>
-     <% end %>
+      <%= render partial: 'form', locals: { topic: @topic } %>
    </div>
 
 </div>
