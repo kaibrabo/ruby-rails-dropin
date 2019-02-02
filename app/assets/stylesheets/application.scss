@@ -21,6 +21,8 @@
 html {
     overflow: scroll;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 ::-webkit-scrollbar {
@@ -30,6 +32,7 @@ html {
 
 body {
     width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container { 
