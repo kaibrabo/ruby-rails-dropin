@@ -40,10 +40,14 @@
  gem 'jbuilder', '~> 2.5'
  
  gem 'thor'
+ ###############################################
  
- # manually added
- 
+ # Manually added
+ # Stylesheet
  gem 'bootstrap-sass'
+ 
+ # Authentication
+ gem 'devise'
  
  
  group :development do
