@@ -45,6 +45,7 @@
  # Manually added
  # Stylesheet
  gem 'bootstrap-sass'
+ gem 'sassc'
  
  # Authentication
  gem 'devise'
