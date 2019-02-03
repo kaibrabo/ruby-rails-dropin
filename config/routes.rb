@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     get 'login', to: 'devise/sessions#new'
   end
     
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => 'registrations'
+  }
   
   resources :topics do
     resources :posts, except: [:index]
